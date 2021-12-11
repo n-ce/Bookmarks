@@ -1,1 +1,13 @@
+<!DOCTYPE html>
+<html>
+Loading...
+<script>
+  let regexp = /android|iphone|kindle|ipad/i;
+  if (regexp.test(navigator.userAgent)) {
+    window.location.replace("https://n-ce.github.io/Bookmarks/mobile");
+  } else {
+    window.location.replace("https://n-ce.github.io/Bookmarks/desktop");
+  }
+</script>
 
+</html>
