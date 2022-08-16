@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(white 85%, deepskyblue 85%)
+}
+
+h1 {
+  height: 35%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+div {
+  height: 50%;
+  width: 100%;
+  background-color: deepskyblue;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button {
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  background: dodgerblue;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  opacity: 75%;
+  box-shadow: 0 0 1rem dodgerblue;
+  transition: all 0.5s;
+}
+
+button:focus {
+  opacity: 100%;
+  transform: rotate(135deg);
+  font-size: 1.7rem;
+}
+
+a{
+  height: 3rem;
+  width: 3rem;
+  text-decoration: none;
+  background-color: white;
+  color: dodgerblue;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  overflow:auto;
+  transition: all 0.5s;
+}
+a:hover{
+  background-color: dodgerblue;
+  color: white;
+}
+a::-webkit-scrollbar {
+  display: none;
+}
