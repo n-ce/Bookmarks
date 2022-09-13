@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-@import url('https://css.gg/css?=add-r|import|export');
+@import url('https://css.gg/css?=add-r|import|export|close-o|close-r');
 
 :root {
   --fontSize: 2rem;
@@ -57,17 +57,25 @@ section {
 }
 
 a {
-  padding: 0 1rem 0 1rem;
   text-decoration: none;
-  background-color: var(--color);
   color: #fff;
   font-size: var(--fontSize);
-  border-radius: 1rem;
+}
+span{
   display: flex;
   justify-content: center;
-  align-items: center;
+  border-radius: 1rem;
+  padding: 0 1rem 0 1rem;
+  background-color: var(--color);
 }
-
+.gg-close-o{
+  color:red;
+  margin-left: 1rem;
+  display: none;
+}
+.display{
+  display: flex;
+}
 a:hover,
 a:focus {
   background-color: #000c;
