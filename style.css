@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-@import url('https://css.gg/css?=add-r|import|export|close-o|close-r');
+@import url('https://css.gg/css?=add-r|import|export|close-o|close-r|more-r');
 
 :root {
   --fontSize: 2rem;
-  --h1: 85%;
-  --div: 15%;
+  --top: 85%;
+  --bottom: 15%;
   --color: darkslategrey;
 }
 
@@ -33,14 +33,14 @@ body {
 
 h1 {
   margin: 0;
-  height: var(--h1);
+  height: var(--top);
   display: flex;
   align-items: center;
   color: white;
 }
 
 div {
-  height: var(--div);
+  height: var(--bottom);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   background: linear-gradient(#fff, #fff9);
@@ -75,6 +75,9 @@ span{
 }
 .display{
   display: flex;
+}
+.hide{
+  display: none;
 }
 a:hover,
 a:focus {

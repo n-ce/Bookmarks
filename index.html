@@ -18,10 +18,13 @@
   <div>
     <section></section>
     <footer>
-      <button class="gg-import"></button>
-      <button class="gg-add-r" onclick="add()"></button>
-      <button class="gg-close-r" onclick="closer()"></button>
-      <button class="gg-export"></button>
+      <button class="gg-more-r"></button>
+      <input type="file" class="hide" onchange="(async () => {Import(await this.files[0].text())})()">
+ 
+      <button class="gg-import hide"></button>
+      <button class="gg-add-r hide" onclick="add()"></button>
+      <button class="gg-close-r hide" onclick="closer()"></button>
+      <button class="gg-export hide" onclick="Export()"></button>
     </footer>
   </div>
   <script src="script.js"></script>
