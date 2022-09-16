@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="darkslategray">
+  <meta name="theme-color" content="#360033">
 
   <title>Bookmarks</title>
   <link rel="stylesheet" href="style.css">
@@ -14,19 +14,19 @@
 </head>
 
 <body>
+
   <h1>BOOKMARKS</h1>
-  <div>
-    <section></section>
-    <footer>
-      <button class="gg-more-r"></button>
-      <input type="file" class="hide" onchange="(async () => {Import(await this.files[0].text())})()">
- 
-      <button class="gg-import hide"></button>
-      <button class="gg-add-r hide" onclick="add()"></button>
-      <button class="gg-close-r hide" onclick="closer()"></button>
-      <button class="gg-export hide" onclick="Export()"></button>
-    </footer>
-  </div>
+  <section></section>
+  <footer>
+    <span onclick="remove()">Remove</span>
+    <span onclick="add()">Add</span>
+    <label for="upload">
+      <span aria-hidden="true">Import</span>
+      <input type="file" id="upload" onchange="(async () => {Import(await this.files[0].text())})()">
+    </label>
+    <span onclick="Export()">Export</span>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 
