@@ -1,36 +1,27 @@
-const linksParent = document.getElementsByTagName('section')[0];
+const linksParent = document.querySelector('section');
 const linksRemovers = document.getElementsByTagName('p');
 let nameLinks = [];
-let col;
-let gridNo = 0;
 let n = 0;
 let arr = [];
-let obj;
-
-const cssVar = (p, q) => document.querySelector(':root').style.setProperty(p, q);
-
 
 const add = () => {
   nameLinks = prompt('Enter Name & URL separated by comma').split(',');
 
   if (nameLinks[1] != undefined && nameLinks[1] != '') {
-    //
-    obj = {
-      Name: nameLinks[0],
-      URL: nameLinks[1]
-    };
     n = 0;
     arr.forEach((e, i) => {
-      e.Name == obj.Name ?
-        document.getElementsByTagName('a')[i].href = e.URL = obj.URL :
+      e.Name == nameLinks[0] ?
+        document.getElementsByTagName('a')[i].href = e.URL = nameLinks[1] :
         n++;
     });
     if (n == arr.length) {
-      linksParent.innerHTML += `<span><a href=${obj.URL}>${obj.Name}</a><p>×</p></span>`;
-      arr.push(obj);
+      linksParent.innerHTML += `<span><a href=${nameLinks[1]}>${nameLinks[0]}</a><p></p></span>`;
+      arr.push({
+           Name: nameLinks[0],
+           URL: nameLinks[1]
+         });
     }
     localStorage.setItem('data', JSON.stringify(arr));
-    //
 
     if (linksRemovers[0].classList.contains('display'))
       linksRemovers[linksRemovers.length - 1].classList.add('display');
@@ -68,7 +59,7 @@ let Import = (val) => {
   arr = arr.concat(JSON.parse(val));
   linksParent.innerHTML = null;
   for (const x of arr)
-    linksParent.innerHTML += `<span><a href=${x.URL}>${x.Name}</a><p>×</p></span>`;
+    linksParent.innerHTML += `<span><a href=${x.URL}>${x.Name}</a><p></p></span>`;
 }
 
 if (localStorage.getItem('data') != null) {
