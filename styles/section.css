@@ -52,3 +52,9 @@ p.display::before {
 p.display::after {
   transform: rotate(-45deg)
 }
+
+@media(orientation:landscape) {
+  section {
+    grid-template-columns: auto auto auto auto;
+  }
+}

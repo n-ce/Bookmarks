@@ -32,3 +32,8 @@ label span {
 input {
   display: none
 }
+@media(orientation:landscape) {
+  footer {
+    grid-template-columns: auto auto auto auto
+  }
+}

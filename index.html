@@ -17,16 +17,25 @@
 
 <body>
 
-  <h1><a href="https://github.com/n-ce/Bookmarks">BOOKMARKS</a></h1>
+  <h1>
+    <a href="https://github.com/n-ce/Bookmarks">BOOKMARKS</a>
+  </h1>
+
   <section></section>
+
   <footer>
+
     <span onclick="remove()">Remove</span>
+
     <span onclick="add()">Add/Edit</span>
+
     <label for="upload">
       <span aria-hidden="true">Import</span>
       <input type="file" id="upload" onchange="(async () => {Import(await this.files[0].text())})()">
     </label>
+
     <span onclick="Export()">Export</span>
+
   </footer>
 
   <script src="script.js"></script>
