@@ -9,17 +9,19 @@
   <meta name="theme-color" content="#0093E9">
 
   <title>Bookmarks</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/section.css">
+  <link rel="stylesheet" href="styles/footer.css">
 
 </head>
 
 <body>
 
-  <h1>BOOKMARKS</h1>
+  <h1><a href="https://github.com/n-ce/Bookmarks">BOOKMARKS</a></h1>
   <section></section>
   <footer>
     <span onclick="remove()">Remove</span>
-    <span onclick="add()">Add</span>
+    <span onclick="add()">Add/Edit</span>
     <label for="upload">
       <span aria-hidden="true">Import</span>
       <input type="file" id="upload" onchange="(async () => {Import(await this.files[0].text())})()">

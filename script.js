@@ -5,7 +5,7 @@ let n = 0;
 let arr = [];
 
 const add = () => {
-  nameLinks = prompt('Enter Name & URL separated by comma').split(',');
+  nameLinks = prompt('Add or Edit an exisiting bookmark by entering Name & URL separated by comma').split(',');
 
   if (nameLinks[1] != undefined && nameLinks[1] != '') {
     n = 0;
@@ -16,10 +16,7 @@ const add = () => {
     });
     if (n == arr.length) {
       linksParent.innerHTML += `<span><a href=${nameLinks[1]}>${nameLinks[0]}</a><p></p></span>`;
-      arr.push({
-           Name: nameLinks[0],
-           URL: nameLinks[1]
-         });
+      arr.push({Name: nameLinks[0],URL: nameLinks[1]});
     }
     localStorage.setItem('data', JSON.stringify(arr));
 
@@ -38,7 +35,7 @@ const remove = () => {
 }
 
 
-let Export = () => {
+const Export = () => {
   if (linksParent.innerHTML != '') {
     const textToBLOB = new Blob([JSON.stringify(arr)], { type: 'application/json' });
     let newLink = document.createElement("a");
@@ -55,7 +52,7 @@ let Export = () => {
   }
 }
 
-let Import = (val) => {
+const Import = (val) => {
   arr = arr.concat(JSON.parse(val));
   linksParent.innerHTML = null;
   for (const x of arr)

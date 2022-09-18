@@ -1,0 +1,54 @@
+section {
+  height: 75%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+section span {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+section a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #fff;
+  height: 2rem;
+  width: 60%;
+  border-radius: 1rem;
+  padding: 0 1rem 0 1rem;
+  color: black;
+}
+
+p.display {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: red;
+  margin-left: -2rem;
+}
+
+p.display::after,
+p.display::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 1.2rem;
+  height: 0.2rem;
+  background: #fff;
+  transform: rotate(45deg);
+  top: 0.9rem;
+  left: 0.4rem;
+}
+
+p.display::after {
+  transform: rotate(-45deg)
+}
