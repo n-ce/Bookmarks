@@ -9,18 +9,26 @@ footer span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#fff5,#fff9);
-  transition: background-color 0.5s;
+  background: linear-gradient(#fff4, #fff9);
+  transition: color 0.5s;
 }
 
-footer span:hover {
-  background-color: #fff
+.click {
+  background: linear-gradient(#f00a, #f00f);
+  color: #fff;
 }
 
-footer span , label {
+footer span,
+label {
   margin: 0.5rem;
   border-radius: 1rem;
+  display: none;
 }
+
+footer:hover span,label{
+  display:flex;
+}
+
 
 label span {
   margin: 0;
@@ -32,8 +40,10 @@ label span {
 input {
   display: none
 }
+
 @media(orientation:landscape) {
   footer {
     grid-template-columns: auto auto auto auto
   }
 }
+

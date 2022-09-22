@@ -25,3 +25,20 @@ h1 a {
   color: #fff9;
   text-decoration: none;
 }
+b{
+  text-align: center;
+  color:#0004;
+  animation: blink 2s ease-in;
+}
+body:hover b{
+  display: none;
+}
+@keyframes blink{
+  from{
+    color: transparent;
+  }
+  50%{
+    color: black;
+  }
+  
+}
