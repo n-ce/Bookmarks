@@ -30,9 +30,7 @@ b{
   color:#0004;
   animation: blink 2s ease-in;
 }
-body:hover b{
-  display: none;
-}
+
 @keyframes blink{
   from{
     color: transparent;

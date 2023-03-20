@@ -22,12 +22,8 @@ footer span,
 label {
   margin: 0.5rem;
   border-radius: 1rem;
-  display: none;
 }
 
-footer:hover span,label{
-  display:flex;
-}
 
 
 label span {

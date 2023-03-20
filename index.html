@@ -3,44 +3,41 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#0093E9">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#0093E9">
 
-  <title>Bookmarks</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/section.css">
-  <link rel="stylesheet" href="styles/footer.css">
+	<title>Bookmarks</title>
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/section.css">
+	<link rel="stylesheet" href="styles/footer.css">
 
 </head>
 
 <body>
 
-  <h1>
-    <a href="https://github.com/n-ce/Bookmarks">BOOKMARKS</a>
-  </h1>
+	<h1>
+		<a href="https://github.com/n-ce/Bookmarks">BOOKMARKS</a>
+	</h1>
 
-  <section></section>
-  <b>Hover Underneath to display options</b>
-  <footer>
-    <span>Remove</span>
+	<section id="bookmarksList"></section>
+	<footer>
+		
+		<span id="removeBtn">Remove</span>
 
-    <span>Add/Edit</span>
+		<span id="updateBtn">Update</span>
 
-    <label for="upload">
-      <span aria-hidden="true">Import</span>
-      <input type="file" id="upload">
-    </label>
+		<label for="upload">
+			<span aria-hidden="true">Import</span>
+			<input type="file" id="upload">
+		</label>
 
-    <span>Export</span>
+		<span id="exportBtn">Export</span>
 
-  </footer>
+	</footer>
 
-  <script src="scripts/add.js" type="module"></script>
-  <script src="scripts/remove.js" type="module"></script>
-  <script src="scripts/import.js" type="module"></script>
-  <script src="scripts/export.js" type="module"></script>
+	<script src="main.js"></script>
 </body>
 
 </html>
