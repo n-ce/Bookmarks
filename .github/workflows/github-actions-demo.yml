@@ -9,6 +9,6 @@ jobs:
       - uses: actions/setup-node@v3
         with: 
           node-version: 18
-      - run: npm init
-      - run: npm ci
-      - run: npm test
+      - run: npm install --save-exact esbuild
+      - run: ./node_modules/.bin/esbuild --version
+      - run: npm run build
