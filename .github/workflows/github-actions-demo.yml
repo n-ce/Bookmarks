@@ -16,8 +16,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Prettify code
-        uses: creyD/prettier_action@v4.3
-        with:
-          # This part is also where you can pass other options, for example:
-          prettier_options: --write **/*.{js,md}
+      - name: ESBUILD
+      - uses: actions/setup-node@v3
+        with: 
+          node-version: 16
+      - run: npm ci
+      - run: npm test
