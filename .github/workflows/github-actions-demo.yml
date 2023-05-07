@@ -10,7 +10,7 @@ jobs:
         with: 
           node-version: 18
       - run: npm install postcss postcss-cli autoprefixer
-      - run: npx postcss *.css --use autoprefixer -d build/
+      - run: npx postcss styles/*.css --use autoprefixer -d build/
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Changed files
