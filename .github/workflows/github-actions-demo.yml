@@ -1,0 +1,16 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - run: npm install postcss postcss-cli autoprefixer
+      - run: npx postcss styles/*.css --use autoprefixer -d build/
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Changed files
