@@ -10,5 +10,7 @@ jobs:
         with: 
           node-version: 18
       - run: npm install --save-exact esbuild
-      - run: ./node_modules/.bin/esbuild --version
       - run: ./node_modules/.bin/esbuild main.js --bundle --outfile=out.js
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Changed files
